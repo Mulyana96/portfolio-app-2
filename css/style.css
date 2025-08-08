@@ -1,0 +1,422 @@
+:root {
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #212529;
+}
+
+body.dark-mode {
+  --bs-body-bg: #121212;
+  --bs-body-color: #ffffff;
+}
+
+
+/* ================================
+   ✅ Font & Reset
+================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ================================
+   ✅ Headings & Paragraphs
+================================== */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  color: #0d0d0d;
+}
+
+p {
+  color: #333;
+}
+
+/* ================================
+   ✅ Navbar
+================================== */
+.navbar {
+  transition: background-color 0.4s ease;
+  z-index: 1000;
+}
+
+/* ================================
+   ✅ Hero Section
+================================== */
+#beranda {
+  background: linear-gradient(to bottom, #111827, #1f2937);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+#beranda img {
+  border: 4px solid #ffffff;
+  transition: transform 0.3s ease;
+}
+
+#beranda img:hover {
+  transform: scale(1.05);
+}
+
+
+/* ================================
+   ✅ Kontak & Footer
+================================== */
+footer {
+  transition: background-color 0.4s ease;
+}
+
+/* ================================
+   ✅ Tombol Dark Mode
+================================== */
+#toggleTheme {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ================================
+   ✅ Dark Mode Styles
+================================== */
+.dark-mode {
+  background-color: #1a202c;
+  color: #edf2f7;
+}
+
+.dark-mode body,
+.dark-mode section,
+.dark-mode .navbar,
+.dark-mode footer {
+  background-color: #1a202c;
+  color: #edf2f7;
+}
+
+.dark-mode .navbar,
+.dark-mode footer {
+  background-color: #2d3748 !important;
+}
+
+.dark-mode .carousel-caption {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p {
+  color: #edf2f7;
+}
+
+.dark-mode .btn-outline-light {
+  border-color: #edf2f7;
+  color: #edf2f7;
+}
+
+/* ================================
+   ✅ Responsive
+================================== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  #beranda img {
+    width: 120px;
+  }
+}
+/* =============================
+   ✅ Social Media Icons
+============================= */
+.social-icon {
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #0d6efd; /* Biru Bootstrap */
+  transform: scale(1.2);
+}
+
+/* Dark mode warna ikon */
+.dark-mode .social-icon {
+  color: #edf2f7;
+}
+
+.dark-mode .social-icon:hover {
+  color: #38bdf8; /* Soft cyan biru muda */
+}
+/* =============================
+   ✅ Background Section by Theme
+============================= */
+.section-style {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .section-style {
+  background-color: #1a202c;
+  color: #edf2f7;
+}
+/* =============================
+   ✅ Navbar Font Timbul
+============================= */
+.navbar .navbar-nav .nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #0dcaf0 !important; /* Biru muda Bootstrap */
+  transform: translateY(-2px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+/* =============================
+   ✅ Footer Menyatu dengan Browser
+============================= */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+  background-color: #212529; /* Sesuai bg-dark */
+  color: #ffffff;
+  padding: 1rem;
+  
+}
+.btn-primary {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 14px rgba(0, 123, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.4);
+}
+
+/* === Gaya Gambar Carousel === */
+.carousel-item img {
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* === Deskripsi Dipisah dari Gambar === */
+.carousel-caption {
+  position: static;
+  background-color: transparent;
+  color: var(--bs-body-color);
+  margin-top: 1rem;
+  padding: 0;
+  text-align: center;
+}
+.lihat-projek-btn {
+  margin-top: 1rem;
+}
+/* Gambar carousel timbul */
+.carousel-item img {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.03);
+}
+/* Modal custom style */
+.modal-content {
+  background-color: var(--bs-body-bg); /* agar mengikuti dark/light */
+  color: var(--bs-body-color);         /* otomatis sesuaikan warna font */
+  text-align: center;                  /* rata tengah */
+}
+
+/* Untuk elemen dalam modal */
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.modal-title {
+  width: 100%;
+  font-weight: 600;
+}
+body.dark-mode .modal-title {
+  color: #ffffff !important;
+}
+.text-purple {
+  color: #6f42c1;
+}
+
+#tentang h6 {
+  font-family: 'Inter', sans-serif;
+}
+
+#tentang i {
+  transition: transform 0.3s ease;
+}
+
+#tentang i:hover {
+  transform: scale(1.2);
+}
+/* Untuk ikon warna ungu (Bootstrap) */
+.text-purple {
+  color: #6f42c1;
+}
+
+/* Hover efek untuk ikon */
+#tentang i {
+  transition: transform 0.3s ease;
+}
+
+#tentang i:hover {
+  transform: scale(1.2);
+}
+body[data-bs-theme="dark"] .card {
+  background-color:#212529  !important;
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+}
+
+body[data-bs-theme="dark"] h2,
+body[data-bs-theme="dark"] h4,
+body[data-bs-theme="dark"] h6,
+body[data-bs-theme="darki"] p {
+  color: #f0f0f0;
+}
+/* ====== TAMPILAN TENTANG SAYA ====== */
+#tentang .card {
+  background-color: #f8f9fa; /* Warna terang default (light mode) */
+  color: #212529;
+  border: none;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ====== MODE GELAP: TENTANG SAYA ====== */
+body[data-bs-theme="dark"] #tentang .card {
+  background-color: #212529; /* Sama seperti navbar bg-dark */
+  color: #f8f9fa;            /* Teks terang */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ====== Warna teks saat mode gelap ====== */
+body[data-bs-theme="dark"] #tentang h2,
+body[data-bs-theme="dark"] #tentang h4,
+body[data-bs-theme="dark"] #tentang h6,
+body[data-bs-theme="dark"] #tentang p {
+  color: #ffffff;
+}
+/* Default (light mode) */
+#tentang .card {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+/* Dark mode: sesuaikan dengan warna navbar bg-dark (#212529) */
+body.dark-mode #tentang .card {
+  background-color: #212529 !important;
+  color: #f8f9fa !important;
+}
+
+body.dark-mode #tentang h2,
+body.dark-mode #tentang h4,
+body.dark-mode #tentang h6,
+body.dark-mode #tentang p {
+  color: #f8f9fa !important;
+}
+.text-blue-glow {
+  color: #0d6efd; /* Bootstrap Primary Blue */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Efek timbul */
+  font-weight: bold;
+}
+/* Style card untuk pengalaman bekerja (timbul + mendukung mode gelap) */
+.pengalaman-card {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Jika dark mode aktif */
+body[data-bs-theme="dark"] .pengalaman-card {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+/* Dark mode card background fix */
+.dark-mode .dark-card {
+  background-color: #1e1e2f !important;
+  color: #fff;
+}
+
+/* Dark text fallback for content */
+.text-dark-mode {
+  color: #212529;
+}
+.dark-mode .text-dark-mode {
+  color: #f1f1f1;
+}
+
+/* Custom dark background for section */
+.dark-bg-custom {
+  background-color: #f8f9fa;
+}
+.dark-mode .dark-bg-custom {
+  background-color: #121212;
+}
+
+/* Optional: Hover effect */
+.pengalaman-card:hover {
+  transform: scale(1.01);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
